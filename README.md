@@ -4,11 +4,11 @@
 
 # Hey, I'm Vivek.
 
-**Senior iOS Engineer** building things that run on-device, close to the metal.
+**Software engineer.** I don't have a lane — I have a compass.
 
-I like going deep — into frameworks most people never open, into ideas most people scroll past, into problems where the answer isn't on Stack Overflow.
+Throw me anywhere and I'll figure it out. I've led mobile teams, built search systems at scale, written GPU shaders, designed on-device ML inference from scratch, and shipped apps to millions. The domain doesn't matter — what matters is the problem is hard enough to be worth solving.
 
-Right now I'm obsessed with **on-device intelligence**: vector search, LLM inference, and making Apple Silicon do things it wasn't supposed to.
+Right now I'm building in Swift, Metal, and Accelerate. Tomorrow it might be something completely different.
 
 ---
 
@@ -22,14 +22,13 @@ Right now I'm obsessed with **on-device intelligence**: vector search, LLM infer
 
 ### `~/toolkit`
 
-```swift
-let stack: [String: Any] = [
-    "languages":  ["Swift", "Python", "Metal Shading Language"],
-    "frameworks": ["Accelerate", "vDSP", "Core ML", "Metal", "MapKit", "SwiftUI"],
-    "interests":  ["HNSW", "vector search", "quantization", "on-device ML"],
-    "tools":      ["Xcode", "Instruments", "Claude Code", "Git"]
-]
 ```
+ Swift · Python · Metal Shading Language · C
+ Accelerate · vDSP · Core ML · Metal · MapKit · SwiftUI · UIKit
+ Xcode · Instruments · Claude Code · Git
+```
+
+I pick up whatever the project needs. These are just the ones I've used most recently.
 
 ---
 
@@ -54,7 +53,7 @@ let stack: [String: Any] = [
 
 > *"The best engineers aren't the ones who know the most — they're the ones willing to go where they don't know anything."*
 
-I believe in building things that teach you something you couldn't have learned any other way. Every project I take on is chosen because it forces me into unfamiliar territory.
+I take on projects specifically because they force me into unfamiliar territory. That's where the real learning happens. Comfort zones are for retirement.
 
 ---
 
