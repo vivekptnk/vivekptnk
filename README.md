@@ -54,7 +54,7 @@ education: bs computer engineering, binghamton
 <div align="center">
 
 ```
- philosophy · lifting · motorcycles · space · robotics · animals · deep science · strategy
+ philosophy · lifting · motorcycles · space · robotics · animals
 ```
 
 <sub><a href="https://github.com/vivekptnk">vivekptnk</a> · <a href="https://github.com/vivek-rdc">vivek-rdc</a> · <a href="https://github.com/vivekptnk1">vivekptnk1</a></sub>
