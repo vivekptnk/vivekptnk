@@ -12,171 +12,149 @@
           font-family: 'Courier New', monospace;
         }
 
-        /* animated gradient overlay */
         .c::before {
           content: '';
-          position: absolute;
-          width: 200%; height: 200%;
+          position: absolute; width: 200%; height: 200%;
           top: -50%; left: -50%;
           background: conic-gradient(from 0deg at 50% 50%, 
-            transparent 0deg, rgba(255,215,0,0.02) 60deg, 
-            transparent 120deg, rgba(123,47,247,0.02) 180deg,
-            transparent 240deg, rgba(0,240,255,0.02) 300deg, 
+            transparent 0deg, rgba(255,215,0,0.06) 60deg, 
+            transparent 120deg, rgba(123,47,247,0.06) 180deg,
+            transparent 240deg, rgba(0,240,255,0.06) 300deg, 
             transparent 360deg);
           animation: conic-spin 20s linear infinite;
         }
 
-        /* grid */
         .g {
           position: absolute; width: 100%; height: 100%;
           background-image: 
-            linear-gradient(rgba(255,215,0,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,215,0,0.04) 1px, transparent 1px);
+            linear-gradient(rgba(255,215,0,0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,215,0,0.08) 1px, transparent 1px);
           background-size: 50px 50px;
           animation: grid-fade 8s ease-in-out infinite;
         }
 
-        /* orbiting particles */
         .orbit {
-          position: absolute; width: 350px; height: 350px;
+          position: absolute; width: 300px; height: 300px;
           top: 50%; left: 50%; transform: translate(-50%, -50%);
-          animation: spin 30s linear infinite;
+          animation: spin 25s linear infinite;
         }
-        .orbit-2 { animation: spin 45s linear infinite reverse; width: 280px; height: 280px; }
-        .orbit-3 { animation: spin 20s linear infinite; width: 420px; height: 420px; }
+        .orbit-2 { animation: spin 35s linear infinite reverse; width: 220px; height: 220px; }
+        .orbit-3 { animation: spin 18s linear infinite; width: 380px; height: 380px; }
 
         .particle {
-          position: absolute; width: 4px; height: 4px;
+          position: absolute; width: 6px; height: 6px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(255,215,0,0.8), transparent);
-          box-shadow: 0 0 6px rgba(255,215,0,0.4), 0 0 12px rgba(255,215,0,0.1);
+          background: rgba(255,215,0,0.9);
+          box-shadow: 0 0 10px rgba(255,215,0,0.6), 0 0 25px rgba(255,215,0,0.3), 0 0 50px rgba(255,215,0,0.1);
         }
         .p1 { top: 0; left: 50%; }
         .p2 { bottom: 0; left: 50%; }
         .p3 { top: 50%; left: 0; }
         .p4 { top: 50%; right: 0; }
-        .p5 { top: 10%; left: 10%; background: radial-gradient(circle, rgba(123,47,247,0.8), transparent); box-shadow: 0 0 6px rgba(123,47,247,0.4); }
-        .p6 { bottom: 10%; right: 10%; background: radial-gradient(circle, rgba(0,240,255,0.8), transparent); box-shadow: 0 0 6px rgba(0,240,255,0.4); }
+        .p5 { top: 10%; left: 10%; background: rgba(123,47,247,0.9); box-shadow: 0 0 10px rgba(123,47,247,0.6), 0 0 25px rgba(123,47,247,0.3); }
+        .p6 { bottom: 10%; right: 10%; background: rgba(0,240,255,0.9); box-shadow: 0 0 10px rgba(0,240,255,0.6), 0 0 25px rgba(0,240,255,0.3); }
+        .p7 { top: 15%; right: 15%; background: rgba(255,107,53,0.9); box-shadow: 0 0 10px rgba(255,107,53,0.6); }
+        .p8 { bottom: 15%; left: 15%; background: rgba(255,215,0,0.9); box-shadow: 0 0 10px rgba(255,215,0,0.6); }
 
-        /* sacred geometry - flower of life hint */
         .ring {
           position: absolute; border-radius: 50%;
           top: 50%; left: 50%;
-          border: 1px solid rgba(255,215,0,0.06);
-          animation: pulse-ring 6s ease-in-out infinite;
+          border: 1px solid rgba(255,215,0,0.15);
+          animation: pulse-ring 5s ease-in-out infinite;
         }
-        .r1 { width: 160px; height: 160px; transform: translate(-50%, -50%); }
-        .r2 { width: 160px; height: 160px; transform: translate(-10%, -50%); animation-delay: 1s; border-color: rgba(123,47,247,0.05); }
-        .r3 { width: 160px; height: 160px; transform: translate(-90%, -50%); animation-delay: 2s; border-color: rgba(0,240,255,0.05); }
-        .r4 { width: 160px; height: 160px; transform: translate(-50%, -10%); animation-delay: 0.5s; }
-        .r5 { width: 160px; height: 160px; transform: translate(-50%, -90%); animation-delay: 1.5s; }
-        .r6 { width: 240px; height: 240px; transform: translate(-50%, -50%); animation-delay: 3s; border-color: rgba(255,215,0,0.03); }
-        .r7 { width: 320px; height: 320px; transform: translate(-50%, -50%); animation-delay: 4s; border-color: rgba(123,47,247,0.02); }
+        .r1 { width: 140px; height: 140px; transform: translate(-50%, -50%); }
+        .r2 { width: 140px; height: 140px; transform: translate(-10%, -50%); animation-delay: 0.8s; border-color: rgba(123,47,247,0.12); }
+        .r3 { width: 140px; height: 140px; transform: translate(-90%, -50%); animation-delay: 1.6s; border-color: rgba(0,240,255,0.12); }
+        .r4 { width: 140px; height: 140px; transform: translate(-50%, -10%); animation-delay: 0.4s; border-color: rgba(255,107,53,0.1); }
+        .r5 { width: 140px; height: 140px; transform: translate(-50%, -90%); animation-delay: 1.2s; }
+        .r6 { width: 220px; height: 220px; transform: translate(-50%, -50%); animation-delay: 2s; border-color: rgba(255,215,0,0.08); }
+        .r7 { width: 300px; height: 300px; transform: translate(-50%, -50%); animation-delay: 3s; border-color: rgba(123,47,247,0.06); }
 
-        /* horizontal scan line */
         .scan {
-          position: absolute; width: 100%; height: 1px;
-          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.15) 50%, transparent 100%);
-          animation: scan-move 8s ease-in-out infinite;
+          position: absolute; width: 100%; height: 2px;
+          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.3) 30%, rgba(123,47,247,0.3) 50%, rgba(0,240,255,0.3) 70%, transparent 100%);
+          animation: scan-move 6s ease-in-out infinite;
+          box-shadow: 0 0 15px rgba(255,215,0,0.15);
         }
 
-        /* vertical light streaks */
-        .streak {
-          position: absolute; width: 1px; height: 100%;
-          animation: streak-move 12s linear infinite;
-        }
-        .s1 { left: 20%; background: linear-gradient(180deg, transparent, rgba(255,215,0,0.06), transparent); animation-delay: 0s; }
-        .s2 { left: 50%; background: linear-gradient(180deg, transparent, rgba(123,47,247,0.06), transparent); animation-delay: 4s; }
-        .s3 { left: 80%; background: linear-gradient(180deg, transparent, rgba(0,240,255,0.06), transparent); animation-delay: 8s; }
-
-        /* corner accents */
         .corner {
-          position: absolute; width: 40px; height: 40px;
-          border-color: rgba(255,215,0,0.15);
+          position: absolute; width: 35px; height: 35px;
+          border-color: rgba(255,215,0,0.3);
           border-style: solid; border-width: 0;
         }
-        .tl { top: 15px; left: 15px; border-top-width: 1px; border-left-width: 1px; }
-        .tr { top: 15px; right: 15px; border-top-width: 1px; border-right-width: 1px; }
-        .bl { bottom: 15px; left: 15px; border-bottom-width: 1px; border-left-width: 1px; }
-        .br { bottom: 15px; right: 15px; border-bottom-width: 1px; border-right-width: 1px; }
+        .tl { top: 12px; left: 12px; border-top-width: 2px; border-left-width: 2px; }
+        .tr { top: 12px; right: 12px; border-top-width: 2px; border-right-width: 2px; }
+        .bl { bottom: 12px; left: 12px; border-bottom-width: 2px; border-left-width: 2px; }
+        .br { bottom: 12px; right: 12px; border-bottom-width: 2px; border-right-width: 2px; }
 
-        /* floating hex shapes */
         .hex {
-          position: absolute;
-          width: 30px; height: 30px;
-          border: 1px solid rgba(255,215,0,0.08);
+          position: absolute; width: 25px; height: 25px;
+          border: 1px solid rgba(255,215,0,0.2);
           transform: rotate(45deg);
-          animation: float 5s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
         }
-        .h1 { left: 8%; top: 20%; animation-delay: 0s; }
-        .h2 { right: 8%; bottom: 20%; animation-delay: 2.5s; border-color: rgba(123,47,247,0.08); }
-        .h3 { left: 15%; bottom: 15%; animation-delay: 1s; width: 20px; height: 20px; border-color: rgba(0,240,255,0.08); }
-        .h4 { right: 15%; top: 15%; animation-delay: 3.5s; width: 20px; height: 20px; }
+        .h1 { left: 7%; top: 22%; border-color: rgba(0,240,255,0.25); }
+        .h2 { right: 7%; bottom: 22%; animation-delay: 2s; border-color: rgba(123,47,247,0.25); }
+        .h3 { left: 14%; bottom: 18%; animation-delay: 1s; width: 15px; height: 15px; border-color: rgba(255,107,53,0.2); }
+        .h4 { right: 14%; top: 18%; animation-delay: 3s; width: 15px; height: 15px; }
+        .h5 { left: 30%; top: 10%; animation-delay: 0.5s; width: 12px; height: 12px; border-color: rgba(0,240,255,0.2); }
+        .h6 { right: 30%; bottom: 10%; animation-delay: 2.5s; width: 12px; height: 12px; border-color: rgba(123,47,247,0.2); }
 
-        /* text */
         .content { position: relative; z-index: 10; text-align: center; }
 
         .name {
           font-size: 2.2em; font-weight: 300;
           letter-spacing: 0.35em;
-          color: rgba(255, 215, 0, 0.9);
-          text-shadow: 0 0 40px rgba(255,215,0,0.2), 0 0 80px rgba(255,215,0,0.05);
-          animation: glow-text 5s ease-in-out infinite;
-          margin-bottom: 16px;
+          color: rgba(255, 215, 0, 0.95);
+          text-shadow: 0 0 30px rgba(255,215,0,0.4), 0 0 60px rgba(255,215,0,0.15), 0 0 100px rgba(255,215,0,0.05);
+          animation: glow-text 4s ease-in-out infinite;
+          margin-bottom: 14px;
         }
 
         .divider {
-          width: 80px; height: 1px; margin: 0 auto 16px;
-          background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), rgba(123,47,247,0.3), transparent);
-          animation: expand 5s ease-in-out infinite;
+          width: 100px; height: 2px; margin: 0 auto 14px;
+          background: linear-gradient(90deg, transparent, #ffd700, #7b2ff7, #00f0ff, transparent);
+          animation: expand 4s ease-in-out infinite;
+          box-shadow: 0 0 8px rgba(255,215,0,0.2);
         }
 
         .sub {
           font-size: 0.7em; letter-spacing: 0.4em;
-          color: rgba(180, 160, 210, 0.45);
+          color: rgba(200, 180, 230, 0.6);
         }
 
         .tag {
-          margin-top: 12px; font-size: 0.55em;
+          margin-top: 10px; font-size: 0.55em;
           letter-spacing: 0.2em;
-          color: rgba(0, 240, 255, 0.25);
+          color: rgba(0, 240, 255, 0.4);
         }
 
         @keyframes conic-spin { to { transform: rotate(360deg); } }
         @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
         @keyframes pulse-ring {
-          0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+          0%, 100% { opacity: 1; } 50% { opacity: 0.2; }
         }
         @keyframes glow-text {
-          0%, 100% { text-shadow: 0 0 40px rgba(255,215,0,0.2), 0 0 80px rgba(255,215,0,0.05); }
-          50% { text-shadow: 0 0 60px rgba(255,215,0,0.35), 0 0 120px rgba(255,215,0,0.1), 0 0 4px rgba(255,215,0,0.6); }
+          0%, 100% { text-shadow: 0 0 30px rgba(255,215,0,0.4), 0 0 60px rgba(255,215,0,0.15); }
+          50% { text-shadow: 0 0 50px rgba(255,215,0,0.6), 0 0 100px rgba(255,215,0,0.25), 0 0 6px rgba(255,215,0,0.8); }
         }
         @keyframes float {
           0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.5; }
-          50% { transform: rotate(45deg) translateY(-10px); opacity: 1; }
+          50% { transform: rotate(45deg) translateY(-12px); opacity: 1; }
         }
         @keyframes scan-move {
-          0% { top: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; }
-        }
-        @keyframes streak-move {
-          0% { opacity: 0; transform: translateY(-100%); }
-          20% { opacity: 1; }
-          80% { opacity: 1; }
-          100% { opacity: 0; transform: translateY(100%); }
+          0% { top: -2px; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 320px; opacity: 0; }
         }
         @keyframes expand {
-          0%, 100% { width: 80px; } 50% { width: 200px; }
+          0%, 100% { width: 100px; } 50% { width: 220px; }
         }
         @keyframes grid-fade {
-          0%, 100% { opacity: 0.6; } 50% { opacity: 1; }
+          0%, 100% { opacity: 0.5; } 50% { opacity: 1; }
         }
       </style>
       <div class="c">
         <div class="g"></div>
         <div class="scan"></div>
-        <div class="streak s1"></div>
-        <div class="streak s2"></div>
-        <div class="streak s3"></div>
         <div class="corner tl"></div>
         <div class="corner tr"></div>
         <div class="corner bl"></div>
@@ -190,11 +168,13 @@
         <div class="ring r7"></div>
         <div class="orbit"><div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div><div class="particle p4"></div></div>
         <div class="orbit orbit-2"><div class="particle p5"></div><div class="particle p6"></div></div>
-        <div class="orbit orbit-3"><div class="particle p1"></div><div class="particle p3"></div></div>
+        <div class="orbit orbit-3"><div class="particle p7"></div><div class="particle p8"></div></div>
         <div class="hex h1"></div>
         <div class="hex h2"></div>
         <div class="hex h3"></div>
         <div class="hex h4"></div>
+        <div class="hex h5"></div>
+        <div class="hex h6"></div>
         <div class="content">
           <div class="name">VIVEK PATTANAIK</div>
           <div class="divider"></div>
