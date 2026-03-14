@@ -6,180 +6,203 @@
         
         .c {
           width: 900px; height: 320px;
-          background: radial-gradient(ellipse at 50% 50%, #1a0a2e 0%, #0d0d1a 40%, #07070d 100%);
+          background: #07070d;
           display: flex; align-items: center; justify-content: center;
           position: relative; overflow: hidden;
           font-family: 'Courier New', monospace;
         }
 
-        .c::before {
-          content: '';
-          position: absolute; width: 200%; height: 200%;
-          top: -50%; left: -50%;
-          background: conic-gradient(from 0deg at 50% 50%, 
-            transparent 0deg, rgba(255,215,0,0.06) 60deg, 
-            transparent 120deg, rgba(123,47,247,0.06) 180deg,
-            transparent 240deg, rgba(0,240,255,0.06) 300deg, 
-            transparent 360deg);
-          animation: conic-spin 20s linear infinite;
+        /* animated aurora background */
+        .aurora {
+          position: absolute; width: 100%; height: 100%;
+          background: 
+            radial-gradient(ellipse 80% 50% at 20% 60%, rgba(123,47,247,0.25) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 50% at 80% 40%, rgba(0,240,255,0.2) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 40% at 50% 80%, rgba(255,107,53,0.15) 0%, transparent 60%),
+            radial-gradient(ellipse 50% 50% at 50% 20%, rgba(255,215,0,0.15) 0%, transparent 60%);
+          animation: aurora-shift 10s ease-in-out infinite alternate;
         }
 
+        /* moving gradient blob */
+        .blob {
+          position: absolute; width: 400px; height: 400px;
+          border-radius: 50%;
+          filter: blur(80px);
+          animation: blob-move 15s ease-in-out infinite;
+        }
+        .b1 {
+          background: rgba(123,47,247,0.3);
+          top: -100px; left: -50px;
+          animation-delay: 0s;
+        }
+        .b2 {
+          background: rgba(0,240,255,0.2);
+          bottom: -100px; right: -50px;
+          animation-delay: 5s;
+        }
+        .b3 {
+          background: rgba(255,215,0,0.15);
+          top: -50px; right: 200px;
+          animation-delay: 10s;
+          width: 300px; height: 300px;
+        }
+
+        /* grid overlay */
         .g {
           position: absolute; width: 100%; height: 100%;
           background-image: 
-            linear-gradient(rgba(255,215,0,0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,215,0,0.08) 1px, transparent 1px);
-          background-size: 50px 50px;
-          animation: grid-fade 8s ease-in-out infinite;
+            linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+          background-size: 40px 40px;
         }
 
-        .orbit {
-          position: absolute; width: 300px; height: 300px;
-          top: 50%; left: 50%; transform: translate(-50%, -50%);
-          animation: spin 25s linear infinite;
+        /* visible sacred geometry */
+        .geo {
+          position: absolute; top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: 280px; height: 280px;
+          animation: geo-spin 40s linear infinite;
         }
-        .orbit-2 { animation: spin 35s linear infinite reverse; width: 220px; height: 220px; }
-        .orbit-3 { animation: spin 18s linear infinite; width: 380px; height: 380px; }
 
-        .particle {
-          position: absolute; width: 6px; height: 6px;
-          border-radius: 50%;
-          background: rgba(255,215,0,0.9);
-          box-shadow: 0 0 10px rgba(255,215,0,0.6), 0 0 25px rgba(255,215,0,0.3), 0 0 50px rgba(255,215,0,0.1);
-        }
-        .p1 { top: 0; left: 50%; }
-        .p2 { bottom: 0; left: 50%; }
-        .p3 { top: 50%; left: 0; }
-        .p4 { top: 50%; right: 0; }
-        .p5 { top: 10%; left: 10%; background: rgba(123,47,247,0.9); box-shadow: 0 0 10px rgba(123,47,247,0.6), 0 0 25px rgba(123,47,247,0.3); }
-        .p6 { bottom: 10%; right: 10%; background: rgba(0,240,255,0.9); box-shadow: 0 0 10px rgba(0,240,255,0.6), 0 0 25px rgba(0,240,255,0.3); }
-        .p7 { top: 15%; right: 15%; background: rgba(255,107,53,0.9); box-shadow: 0 0 10px rgba(255,107,53,0.6); }
-        .p8 { bottom: 15%; left: 15%; background: rgba(255,215,0,0.9); box-shadow: 0 0 10px rgba(255,215,0,0.6); }
-
-        .ring {
+        .geo-ring {
           position: absolute; border-radius: 50%;
           top: 50%; left: 50%;
-          border: 1px solid rgba(255,215,0,0.15);
-          animation: pulse-ring 5s ease-in-out infinite;
+          border: 1.5px solid;
+          animation: ring-breathe 4s ease-in-out infinite;
         }
-        .r1 { width: 140px; height: 140px; transform: translate(-50%, -50%); }
-        .r2 { width: 140px; height: 140px; transform: translate(-10%, -50%); animation-delay: 0.8s; border-color: rgba(123,47,247,0.12); }
-        .r3 { width: 140px; height: 140px; transform: translate(-90%, -50%); animation-delay: 1.6s; border-color: rgba(0,240,255,0.12); }
-        .r4 { width: 140px; height: 140px; transform: translate(-50%, -10%); animation-delay: 0.4s; border-color: rgba(255,107,53,0.1); }
-        .r5 { width: 140px; height: 140px; transform: translate(-50%, -90%); animation-delay: 1.2s; }
-        .r6 { width: 220px; height: 220px; transform: translate(-50%, -50%); animation-delay: 2s; border-color: rgba(255,215,0,0.08); }
-        .r7 { width: 300px; height: 300px; transform: translate(-50%, -50%); animation-delay: 3s; border-color: rgba(123,47,247,0.06); }
+        .gr1 { width: 120px; height: 120px; transform: translate(-50%, -50%); border-color: rgba(255,215,0,0.35); }
+        .gr2 { width: 120px; height: 120px; transform: translate(-15%, -50%); border-color: rgba(123,47,247,0.3); animation-delay: 0.7s; }
+        .gr3 { width: 120px; height: 120px; transform: translate(-85%, -50%); border-color: rgba(0,240,255,0.3); animation-delay: 1.4s; }
+        .gr4 { width: 120px; height: 120px; transform: translate(-50%, -15%); border-color: rgba(255,107,53,0.25); animation-delay: 0.3s; }
+        .gr5 { width: 120px; height: 120px; transform: translate(-50%, -85%); border-color: rgba(255,215,0,0.25); animation-delay: 1s; }
+        .gr6 { width: 200px; height: 200px; transform: translate(-50%, -50%); border-color: rgba(255,215,0,0.12); animation-delay: 2s; }
+        .gr7 { width: 280px; height: 280px; transform: translate(-50%, -50%); border-color: rgba(123,47,247,0.08); animation-delay: 3s; }
 
+        /* center dot */
+        .center-dot {
+          position: absolute; top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px; height: 8px; border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 15px rgba(255,215,0,0.6), 0 0 40px rgba(255,215,0,0.3), 0 0 80px rgba(255,215,0,0.1);
+          animation: center-pulse 3s ease-in-out infinite;
+        }
+
+        /* scan line */
         .scan {
           position: absolute; width: 100%; height: 2px;
-          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.3) 30%, rgba(123,47,247,0.3) 50%, rgba(0,240,255,0.3) 70%, transparent 100%);
-          animation: scan-move 6s ease-in-out infinite;
-          box-shadow: 0 0 15px rgba(255,215,0,0.15);
+          background: linear-gradient(90deg, transparent, rgba(0,240,255,0.4), rgba(123,47,247,0.4), rgba(255,215,0,0.4), transparent);
+          box-shadow: 0 0 20px rgba(0,240,255,0.2), 0 -5px 20px rgba(123,47,247,0.1), 0 5px 20px rgba(255,215,0,0.1);
+          animation: scan-move 5s ease-in-out infinite;
         }
 
-        .corner {
-          position: absolute; width: 35px; height: 35px;
-          border-color: rgba(255,215,0,0.3);
-          border-style: solid; border-width: 0;
-        }
-        .tl { top: 12px; left: 12px; border-top-width: 2px; border-left-width: 2px; }
-        .tr { top: 12px; right: 12px; border-top-width: 2px; border-right-width: 2px; }
-        .bl { bottom: 12px; left: 12px; border-bottom-width: 2px; border-left-width: 2px; }
-        .br { bottom: 12px; right: 12px; border-bottom-width: 2px; border-right-width: 2px; }
+        /* corner HUD */
+        .corner { position: absolute; width: 30px; height: 30px; border-style: solid; border-width: 0; }
+        .tl { top: 10px; left: 10px; border-top-width: 2px; border-left-width: 2px; border-color: rgba(0,240,255,0.5); }
+        .tr { top: 10px; right: 10px; border-top-width: 2px; border-right-width: 2px; border-color: rgba(123,47,247,0.5); }
+        .bl { bottom: 10px; left: 10px; border-bottom-width: 2px; border-left-width: 2px; border-color: rgba(255,215,0,0.5); }
+        .br { bottom: 10px; right: 10px; border-bottom-width: 2px; border-right-width: 2px; border-color: rgba(255,107,53,0.5); }
 
-        .hex {
-          position: absolute; width: 25px; height: 25px;
-          border: 1px solid rgba(255,215,0,0.2);
-          transform: rotate(45deg);
-          animation: float 4s ease-in-out infinite;
-        }
-        .h1 { left: 7%; top: 22%; border-color: rgba(0,240,255,0.25); }
-        .h2 { right: 7%; bottom: 22%; animation-delay: 2s; border-color: rgba(123,47,247,0.25); }
-        .h3 { left: 14%; bottom: 18%; animation-delay: 1s; width: 15px; height: 15px; border-color: rgba(255,107,53,0.2); }
-        .h4 { right: 14%; top: 18%; animation-delay: 3s; width: 15px; height: 15px; }
-        .h5 { left: 30%; top: 10%; animation-delay: 0.5s; width: 12px; height: 12px; border-color: rgba(0,240,255,0.2); }
-        .h6 { right: 30%; bottom: 10%; animation-delay: 2.5s; width: 12px; height: 12px; border-color: rgba(123,47,247,0.2); }
+        /* orbiting particles */
+        .orb { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .o1 { width: 340px; height: 340px; animation: orb-spin 20s linear infinite; }
+        .o2 { width: 260px; height: 260px; animation: orb-spin 28s linear infinite reverse; }
 
+        .dot {
+          position: absolute; width: 5px; height: 5px; border-radius: 50%;
+        }
+        .d1 { top: 0; left: 50%; background: #ffd700; box-shadow: 0 0 8px #ffd700, 0 0 20px rgba(255,215,0,0.4); }
+        .d2 { bottom: 0; left: 50%; background: #00f0ff; box-shadow: 0 0 8px #00f0ff, 0 0 20px rgba(0,240,255,0.4); }
+        .d3 { top: 50%; left: 0; background: #7b2ff7; box-shadow: 0 0 8px #7b2ff7, 0 0 20px rgba(123,47,247,0.4); }
+        .d4 { top: 50%; right: 0; background: #ff6b35; box-shadow: 0 0 8px #ff6b35, 0 0 20px rgba(255,107,53,0.4); }
+        .d5 { top: 15%; left: 15%; background: #ffd700; box-shadow: 0 0 8px #ffd700; }
+        .d6 { bottom: 15%; right: 15%; background: #00f0ff; box-shadow: 0 0 8px #00f0ff; }
+
+        /* text */
         .content { position: relative; z-index: 10; text-align: center; }
 
         .name {
-          font-size: 2.2em; font-weight: 300;
-          letter-spacing: 0.35em;
-          color: rgba(255, 215, 0, 0.95);
-          text-shadow: 0 0 30px rgba(255,215,0,0.4), 0 0 60px rgba(255,215,0,0.15), 0 0 100px rgba(255,215,0,0.05);
-          animation: glow-text 4s ease-in-out infinite;
-          margin-bottom: 14px;
+          font-size: 2.4em; font-weight: 400; letter-spacing: 0.3em;
+          background: linear-gradient(135deg, #ffd700 0%, #ffaa00 25%, #ff6b35 50%, #7b2ff7 75%, #00f0ff 100%);
+          background-size: 200% 200%;
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: gradient-text 6s ease-in-out infinite;
+          filter: drop-shadow(0 0 20px rgba(255,215,0,0.3));
         }
 
         .divider {
-          width: 100px; height: 2px; margin: 0 auto 14px;
-          background: linear-gradient(90deg, transparent, #ffd700, #7b2ff7, #00f0ff, transparent);
-          animation: expand 4s ease-in-out infinite;
-          box-shadow: 0 0 8px rgba(255,215,0,0.2);
+          width: 120px; height: 2px; margin: 14px auto;
+          background: linear-gradient(90deg, #00f0ff, #7b2ff7, #ffd700, #ff6b35);
+          background-size: 200% 100%;
+          animation: gradient-line 4s linear infinite;
+          border-radius: 2px;
+          box-shadow: 0 0 10px rgba(123,47,247,0.3);
         }
 
         .sub {
-          font-size: 0.7em; letter-spacing: 0.4em;
-          color: rgba(200, 180, 230, 0.6);
+          font-size: 0.7em; letter-spacing: 0.35em;
+          color: rgba(200, 200, 220, 0.6);
         }
 
-        .tag {
-          margin-top: 10px; font-size: 0.55em;
-          letter-spacing: 0.2em;
-          color: rgba(0, 240, 255, 0.4);
+        @keyframes aurora-shift {
+          0% { opacity: 0.7; transform: scale(1); }
+          100% { opacity: 1; transform: scale(1.1); }
         }
-
-        @keyframes conic-spin { to { transform: rotate(360deg); } }
-        @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
-        @keyframes pulse-ring {
-          0%, 100% { opacity: 1; } 50% { opacity: 0.2; }
+        @keyframes blob-move {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -30px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
         }
-        @keyframes glow-text {
-          0%, 100% { text-shadow: 0 0 30px rgba(255,215,0,0.4), 0 0 60px rgba(255,215,0,0.15); }
-          50% { text-shadow: 0 0 50px rgba(255,215,0,0.6), 0 0 100px rgba(255,215,0,0.25), 0 0 6px rgba(255,215,0,0.8); }
+        @keyframes geo-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+        @keyframes ring-breathe {
+          0%, 100% { opacity: 1; transform-origin: center; }
+          50% { opacity: 0.3; }
         }
-        @keyframes float {
-          0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.5; }
-          50% { transform: rotate(45deg) translateY(-12px); opacity: 1; }
+        @keyframes center-pulse {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 15px rgba(255,215,0,0.6), 0 0 40px rgba(255,215,0,0.3); }
+          50% { transform: translate(-50%, -50%) scale(1.5); box-shadow: 0 0 25px rgba(255,215,0,0.8), 0 0 60px rgba(255,215,0,0.4), 0 0 100px rgba(255,215,0,0.2); }
         }
         @keyframes scan-move {
-          0% { top: -2px; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 320px; opacity: 0; }
+          0% { top: -2px; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { top: 320px; opacity: 0; }
         }
-        @keyframes expand {
-          0%, 100% { width: 100px; } 50% { width: 220px; }
+        @keyframes orb-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+        @keyframes gradient-text {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
-        @keyframes grid-fade {
-          0%, 100% { opacity: 0.5; } 50% { opacity: 1; }
+        @keyframes gradient-line {
+          to { background-position: 200% 0; }
         }
       </style>
       <div class="c">
+        <div class="aurora"></div>
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
         <div class="g"></div>
         <div class="scan"></div>
         <div class="corner tl"></div>
         <div class="corner tr"></div>
         <div class="corner bl"></div>
         <div class="corner br"></div>
-        <div class="ring r1"></div>
-        <div class="ring r2"></div>
-        <div class="ring r3"></div>
-        <div class="ring r4"></div>
-        <div class="ring r5"></div>
-        <div class="ring r6"></div>
-        <div class="ring r7"></div>
-        <div class="orbit"><div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div><div class="particle p4"></div></div>
-        <div class="orbit orbit-2"><div class="particle p5"></div><div class="particle p6"></div></div>
-        <div class="orbit orbit-3"><div class="particle p7"></div><div class="particle p8"></div></div>
-        <div class="hex h1"></div>
-        <div class="hex h2"></div>
-        <div class="hex h3"></div>
-        <div class="hex h4"></div>
-        <div class="hex h5"></div>
-        <div class="hex h6"></div>
+        <div class="geo">
+          <div class="geo-ring gr1"></div>
+          <div class="geo-ring gr2"></div>
+          <div class="geo-ring gr3"></div>
+          <div class="geo-ring gr4"></div>
+          <div class="geo-ring gr5"></div>
+          <div class="geo-ring gr6"></div>
+          <div class="geo-ring gr7"></div>
+        </div>
+        <div class="center-dot"></div>
+        <div class="orb o1"><div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="dot d4"></div></div>
+        <div class="orb o2"><div class="dot d5"></div><div class="dot d6"></div></div>
         <div class="content">
           <div class="name">VIVEK PATTANAIK</div>
           <div class="divider"></div>
           <div class="sub">software engineer · bay area</div>
-          <div class="tag">search · on-device ml · metal · swift</div>
         </div>
       </div>
     </div>
