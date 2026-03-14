@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6b35,25:f7931e,50:ffcd38,75:c06cde,100:6c63ff&height=220&section=header&text=Vivek%20Pattanaik&fontColor=ffffff&fontSize=48&fontAlignY=32&desc=engineer%20%C2%B7%20philosopher%20%C2%B7%20rider&descColor=ffffffcc&descSize=18&descAlignY=52&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0a2e,25:3d1c56,50:b8860b,75:daa520,100:ffd700&height=200&section=header&text=Vivek%20Pattanaik&fontColor=ffd700&fontSize=46&fontAlignY=38&animation=fadeIn" width="100%" />
 </div>
 
 ```yaml
@@ -37,9 +37,9 @@ education: bs computer engineering, binghamton
 &nbsp;
 
 ```
-philosophy · AI · lifting · motorcycles · space · robotics · animals
+ philosophy · AI · lifting · motorcycles · space · robotics · animals
 ```
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c63ff,25:c06cde,50:ffcd38,75:f7931e,100:ff6b35&height=100&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ffd700,25:daa520,50:b8860b,75:3d1c56,100:1a0a2e&height=100&section=footer" width="100%" />
