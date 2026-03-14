@@ -1,8 +1,9 @@
+<div align="center">
+<img src="./header.svg" width="100%" />
+</div>
 
 ```yaml
-# vivek pattanaik
-
-location: bay area
+# ~/.config/vivek.yml
 
 current:
   realtor.com:

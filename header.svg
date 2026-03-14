@@ -1,0 +1,207 @@
+<svg fill="none" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .container {
+          width: 900px;
+          height: 300px;
+          background: linear-gradient(135deg, #0a0a0f 0%, #0d0d1a 30%, #1a0a2e 50%, #0d0d1a 70%, #0a0a0f 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          font-family: 'Courier New', monospace;
+        }
+
+        .grid {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: 
+            linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
+          background-size: 40px 40px;
+        }
+
+        .geometry {
+          position: absolute;
+          width: 220px;
+          height: 220px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 215, 0, 0.08);
+          animation: spin 60s linear infinite;
+        }
+        
+        .geometry::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 180px;
+          height: 180px;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          border: 1px solid rgba(255, 215, 0, 0.06);
+        }
+
+        .geometry::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 140px;
+          height: 140px;
+          transform: translate(-50%, -50%) rotate(30deg);
+          border: 1px solid rgba(255, 215, 0, 0.05);
+        }
+
+        .geo-left {
+          left: -60px;
+          top: 40px;
+          animation-direction: normal;
+        }
+
+        .geo-right {
+          right: -60px;
+          top: 40px;
+          animation-direction: reverse;
+        }
+
+        .center-ring {
+          position: absolute;
+          width: 260px;
+          height: 260px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 215, 0, 0.04);
+          animation: pulse-ring 8s ease-in-out infinite;
+        }
+
+        .center-ring-2 {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          border: 1px solid rgba(123, 47, 247, 0.04);
+          animation: pulse-ring 8s ease-in-out infinite 2s;
+        }
+
+        .hex {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          border: 1px solid rgba(255, 215, 0, 0.06);
+          transform: rotate(45deg);
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .hex-1 { left: 120px; top: 30px; animation-delay: 0s; }
+        .hex-2 { right: 120px; bottom: 30px; animation-delay: 2s; }
+        .hex-3 { left: 200px; bottom: 20px; animation-delay: 4s; width: 40px; height: 40px; }
+        .hex-4 { right: 200px; top: 20px; animation-delay: 1s; width: 40px; height: 40px; }
+
+        .dot {
+          position: absolute;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: rgba(255, 215, 0, 0.15);
+          animation: twinkle 4s ease-in-out infinite;
+        }
+
+        .dot-1 { left: 15%; top: 20%; animation-delay: 0s; }
+        .dot-2 { left: 25%; top: 70%; animation-delay: 1.5s; }
+        .dot-3 { right: 15%; top: 25%; animation-delay: 0.8s; }
+        .dot-4 { right: 25%; bottom: 20%; animation-delay: 2.2s; }
+        .dot-5 { left: 40%; top: 15%; animation-delay: 3s; }
+        .dot-6 { right: 40%; bottom: 15%; animation-delay: 1s; }
+        .dot-7 { left: 10%; top: 50%; animation-delay: 2.5s; }
+        .dot-8 { right: 10%; top: 55%; animation-delay: 0.3s; }
+
+        .content {
+          position: relative;
+          z-index: 10;
+          text-align: center;
+        }
+
+        .name {
+          font-size: 2.4em;
+          font-weight: 300;
+          letter-spacing: 0.3em;
+          color: rgba(255, 215, 0, 0.9);
+          text-shadow: 0 0 30px rgba(255, 215, 0, 0.15), 0 0 60px rgba(255, 215, 0, 0.05);
+          animation: glow-text 6s ease-in-out infinite;
+          margin-bottom: 12px;
+        }
+
+        .line {
+          width: 120px;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+          margin: 0 auto 14px;
+          animation: expand 4s ease-in-out infinite;
+        }
+
+        .sub {
+          font-size: 0.75em;
+          letter-spacing: 0.5em;
+          color: rgba(180, 160, 200, 0.5);
+          text-transform: lowercase;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        @keyframes pulse-ring {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.05); opacity: 0.5; }
+        }
+
+        @keyframes glow-text {
+          0%, 100% { text-shadow: 0 0 30px rgba(255,215,0,0.15), 0 0 60px rgba(255,215,0,0.05); }
+          50% { text-shadow: 0 0 40px rgba(255,215,0,0.25), 0 0 80px rgba(255,215,0,0.1); }
+        }
+
+        @keyframes float {
+          0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.6; }
+          50% { transform: rotate(45deg) translateY(-8px); opacity: 1; }
+        }
+
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.1; transform: scale(1); }
+          50% { opacity: 0.6; transform: scale(1.5); }
+        }
+
+        @keyframes expand {
+          0%, 100% { width: 120px; }
+          50% { width: 180px; }
+        }
+      </style>
+      <div class="container">
+        <div class="grid"></div>
+        <div class="geometry geo-left"></div>
+        <div class="geometry geo-right"></div>
+        <div class="center-ring"></div>
+        <div class="center-ring-2"></div>
+        <div class="hex hex-1"></div>
+        <div class="hex hex-2"></div>
+        <div class="hex hex-3"></div>
+        <div class="hex hex-4"></div>
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+        <div class="dot dot-4"></div>
+        <div class="dot dot-5"></div>
+        <div class="dot dot-6"></div>
+        <div class="dot dot-7"></div>
+        <div class="dot dot-8"></div>
+        <div class="content">
+          <div class="name">VIVEK PATTANAIK</div>
+          <div class="line"></div>
+          <div class="sub">bay area · software engineer</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
