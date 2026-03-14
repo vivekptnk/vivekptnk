@@ -13,19 +13,19 @@ education: BS Computer Engineering, SUNY Binghamton
 
 day_job:
   role: Sr. Software Engineer, Mobile
-  where: Realtor.com  # work commits live at @vivek-rdc
+  where: Realtor.com  # commits at @vivek-rdc
   doing:
-    - "tech lead on Search & Discover (iOS + Android, 6 engineers)"
-    - "built natural language search from scratch"
-    - "pioneered server-driven UI architecture"
-    - "AI champion for the mobile org"
-  shipped_to: "millions of users"
+    - tech lead, Search & Discover (6 engineers)
+    - built natural language search from scratch
+    - pioneered server-driven UI architecture
+    - AI champion for the mobile org
+  shipped_to: millions of users
 
 nights_and_weekends:
   building:
-    - "vector search engine in pure Swift + Accelerate"
-    - "LLM inference runtime in Swift + Metal"
-  why: "because the best way to learn something is to build it from nothing"
+    - vector search engine (Swift + Accelerate)
+    - LLM inference runtime (Swift + Metal)
+  why: the best way to learn is to build from nothing
 
 interests:
   mind: [philosophy, AI, spirituality, strategy]
@@ -57,9 +57,9 @@ interests:
 <br>
 
 <div align="center">
-<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" alt="Combined contributions across personal + work" width="95%" />
+<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" alt="Combined contributions" width="95%" />
 <br>
-<sub>combined contributions across <a href="https://github.com/vivekptnk">@vivekptnk</a> + <a href="https://github.com/vivekptnk1">@vivekptnk1</a> + <a href="https://github.com/vivek-rdc">@vivek-rdc</a></sub>
+<sub>combined: <a href="https://github.com/vivekptnk">@vivekptnk</a> + <a href="https://github.com/vivekptnk1">@vivekptnk1</a> + <a href="https://github.com/vivek-rdc">@vivek-rdc</a></sub>
 </div>
 
 <br>
