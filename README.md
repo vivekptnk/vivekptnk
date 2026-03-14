@@ -24,12 +24,7 @@ into: [philosophy, AI, lifting, motorcycles, space, robotics, animals]
 ```
 
 <div align="center">
-<img src="./divider.svg" width="60%" />
-</div>
-
-<div align="center">
-<img src="https://skillicons.dev/icons?i=swift,apple,python,c&theme=dark&perline=4" />
-<br><br>
+<img src="./divider.svg" width="70%" />
 
 <!-- PROJECTS:START -->
 <!-- PROJECTS:END -->
@@ -38,8 +33,6 @@ into: [philosophy, AI, lifting, motorcycles, space, robotics, animals]
 <br>
 <sub><a href="https://github.com/vivekptnk">vivekptnk</a> · <a href="https://github.com/vivek-rdc">vivek-rdc</a> · <a href="https://github.com/vivekptnk1">vivekptnk1</a></sub>
 </div>
-
-<br>
 
 <div align="center">
 <img src="./footer.svg" width="100%" />

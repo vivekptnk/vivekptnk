@@ -1,42 +1,39 @@
-<svg fill="none" viewBox="0 0 900 40" width="900" height="40" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 900 30" width="900" height="30" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .d {
-          width: 900px; height: 40px;
+          width: 900px; height: 30px;
           display: flex; align-items: center; justify-content: center;
-          background: transparent;
         }
         .line {
-          width: 300px; height: 2px;
+          width: 400px; height: 2px;
           background: linear-gradient(90deg, transparent, #00f0ff, #7b2ff7, #ffd700, #ff6b35, transparent);
           background-size: 200% 100%;
           animation: flow 3s linear infinite;
           border-radius: 2px;
-          box-shadow: 0 0 8px rgba(123,47,247,0.3), 0 0 20px rgba(123,47,247,0.1);
+          box-shadow: 0 0 10px rgba(123,47,247,0.4), 0 0 25px rgba(123,47,247,0.15);
         }
         .dot {
-          width: 6px; height: 6px; border-radius: 50%;
-          background: #ffd700;
-          box-shadow: 0 0 6px #ffd700, 0 0 15px rgba(255,215,0,0.4);
-          margin: 0 12px;
+          width: 8px; height: 8px; border-radius: 50%;
+          margin: 0 16px;
           animation: dot-pulse 2s ease-in-out infinite;
         }
-        .dot:nth-child(1) { animation-delay: 0s; background: #00f0ff; box-shadow: 0 0 6px #00f0ff; }
-        .dot:nth-child(3) { animation-delay: 0.5s; }
-        .dot:nth-child(5) { animation-delay: 1s; background: #7b2ff7; box-shadow: 0 0 6px #7b2ff7; }
+        .d1 { background: #00f0ff; box-shadow: 0 0 8px #00f0ff, 0 0 20px rgba(0,240,255,0.4); animation-delay: 0s; }
+        .d2 { background: #ffd700; box-shadow: 0 0 8px #ffd700, 0 0 20px rgba(255,215,0,0.4); animation-delay: 0.7s; }
+        .d3 { background: #7b2ff7; box-shadow: 0 0 8px #7b2ff7, 0 0 20px rgba(123,47,247,0.4); animation-delay: 1.4s; }
         @keyframes flow { to { background-position: 200% 0; } }
         @keyframes dot-pulse {
-          0%, 100% { transform: scale(1); opacity: 0.6; }
-          50% { transform: scale(1.4); opacity: 1; }
+          0%, 100% { transform: scale(1); opacity: 0.5; }
+          50% { transform: scale(1.6); opacity: 1; }
         }
       </style>
       <div class="d">
-        <div class="dot"></div>
+        <div class="dot d1"></div>
         <div class="line"></div>
-        <div class="dot"></div>
+        <div class="dot d2"></div>
         <div class="line"></div>
-        <div class="dot"></div>
+        <div class="dot d3"></div>
       </div>
     </div>
   </foreignObject>
