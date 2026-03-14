@@ -1,77 +1,28 @@
 <div align="center">
-<a href="https://github.com/vivekptnk">
-  <img src="https://readme-typing-svg.demolab.com/?lines=I+don't+have+a+lane;I+have+projects&font=JetBrains+Mono&center=true&width=380&height=50&color=00ff41&vCenter=true&pause=2000&size=20&duration=3000" />
-</a>
-</div>
 
-<br>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:003d1a,100:00ff41&height=200&section=header&text=Vivek%20Pattanaik&fontColor=00ff41&fontSize=42&fontAlignY=35&desc=engineer.%20philosopher.%20rider.&descColor=4ade80&descSize=16&descAlignY=55&animation=fadeIn" width="100%" />
 
 ```yaml
-name: Vivek Pattanaik
-location: Bay Area, CA
-education: BS Computer Engineering, SUNY Binghamton
-
-day_job:
-  role: Sr. Software Engineer, Mobile
-  where: Realtor.com  # commits at @vivek-rdc
-  doing:
-    - tech lead, Search & Discover (6 engineers)
-    - built natural language search from scratch
-    - pioneered server-driven UI architecture
-    - AI champion for the mobile org
-  shipped_to: millions of users
-
-nights_and_weekends:
-  building:
-    - vector search engine (Swift + Accelerate)
-    - LLM inference runtime (Swift + Metal)
-  why: the best way to learn is to build from nothing
-
+role: Sr. Software Engineer, Mobile @ Realtor.com
+building:
+  - vector search engine (Swift + Accelerate)
+  - LLM inference runtime (Swift + Metal)
+stack: [Swift, Metal, Python, C, whatever]
 interests:
   mind: [philosophy, AI, spirituality, strategy]
   body: [lifting, motorcycles, travel]
   frontier: [space tech, robotics, deep science]
-  soul: [animals, presence, the unknown]
 ```
 
----
-
-<div align="center">
-
-### `~/projects`
-
 <!-- PROJECTS:START -->
-> *Nothing here yet — projects will appear when they go public.*
 <!-- PROJECTS:END -->
 
-</div>
-
----
-
-<div align="center">
-
-`Swift` · `Metal` · `Python` · `C` · whatever the project needs
-
-</div>
-
 <br>
 
-<div align="center">
-<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" alt="Combined contributions" width="95%" />
-<br>
-<sub>combined: <a href="https://github.com/vivekptnk">@vivekptnk</a> + <a href="https://github.com/vivekptnk1">@vivekptnk1</a> + <a href="https://github.com/vivek-rdc">@vivek-rdc</a></sub>
-</div>
+<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" alt="contributions" width="90%" />
 
-<br>
+<sub><a href="https://github.com/vivekptnk">@vivekptnk</a> · <a href="https://github.com/vivekptnk1">@vivekptnk1</a> · <a href="https://github.com/vivek-rdc">@vivek-rdc</a></sub>
 
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vivekptnk/vivekptnk/output/snake-dark.svg" />
-<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vivekptnk/vivekptnk/output/snake.svg" />
-<img alt="contribution snake" src="https://raw.githubusercontent.com/vivekptnk/vivekptnk/output/snake-dark.svg" />
-</picture>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:003d1a,100:00ff41&height=80&section=footer" width="100%" />
 
-<br>
-
-<div align="center">
-<img src="https://komarev.com/ghpvc/?username=vivekptnk&color=00ff41&style=flat-square&label=visitors" />
 </div>
