@@ -1,205 +1,205 @@
-<svg fill="none" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 900 320" width="900" height="320" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        .container {
-          width: 900px;
-          height: 300px;
-          background: linear-gradient(135deg, #0a0a0f 0%, #0d0d1a 30%, #1a0a2e 50%, #0d0d1a 70%, #0a0a0f 100%);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          overflow: hidden;
+        .c {
+          width: 900px; height: 320px;
+          background: radial-gradient(ellipse at 50% 50%, #1a0a2e 0%, #0d0d1a 40%, #07070d 100%);
+          display: flex; align-items: center; justify-content: center;
+          position: relative; overflow: hidden;
           font-family: 'Courier New', monospace;
         }
 
-        .grid {
+        /* animated gradient overlay */
+        .c::before {
+          content: '';
           position: absolute;
-          width: 100%;
-          height: 100%;
+          width: 200%; height: 200%;
+          top: -50%; left: -50%;
+          background: conic-gradient(from 0deg at 50% 50%, 
+            transparent 0deg, rgba(255,215,0,0.02) 60deg, 
+            transparent 120deg, rgba(123,47,247,0.02) 180deg,
+            transparent 240deg, rgba(0,240,255,0.02) 300deg, 
+            transparent 360deg);
+          animation: conic-spin 20s linear infinite;
+        }
+
+        /* grid */
+        .g {
+          position: absolute; width: 100%; height: 100%;
           background-image: 
-            linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
-          background-size: 40px 40px;
+            linear-gradient(rgba(255,215,0,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,215,0,0.04) 1px, transparent 1px);
+          background-size: 50px 50px;
+          animation: grid-fade 8s ease-in-out infinite;
         }
 
-        .geometry {
-          position: absolute;
-          width: 220px;
-          height: 220px;
+        /* orbiting particles */
+        .orbit {
+          position: absolute; width: 350px; height: 350px;
+          top: 50%; left: 50%; transform: translate(-50%, -50%);
+          animation: spin 30s linear infinite;
+        }
+        .orbit-2 { animation: spin 45s linear infinite reverse; width: 280px; height: 280px; }
+        .orbit-3 { animation: spin 20s linear infinite; width: 420px; height: 420px; }
+
+        .particle {
+          position: absolute; width: 4px; height: 4px;
           border-radius: 50%;
-          border: 1px solid rgba(255, 215, 0, 0.08);
-          animation: spin 60s linear infinite;
+          background: radial-gradient(circle, rgba(255,215,0,0.8), transparent);
+          box-shadow: 0 0 6px rgba(255,215,0,0.4), 0 0 12px rgba(255,215,0,0.1);
         }
-        
-        .geometry::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 180px;
-          height: 180px;
-          transform: translate(-50%, -50%);
-          border-radius: 50%;
-          border: 1px solid rgba(255, 215, 0, 0.06);
+        .p1 { top: 0; left: 50%; }
+        .p2 { bottom: 0; left: 50%; }
+        .p3 { top: 50%; left: 0; }
+        .p4 { top: 50%; right: 0; }
+        .p5 { top: 10%; left: 10%; background: radial-gradient(circle, rgba(123,47,247,0.8), transparent); box-shadow: 0 0 6px rgba(123,47,247,0.4); }
+        .p6 { bottom: 10%; right: 10%; background: radial-gradient(circle, rgba(0,240,255,0.8), transparent); box-shadow: 0 0 6px rgba(0,240,255,0.4); }
+
+        /* sacred geometry - flower of life hint */
+        .ring {
+          position: absolute; border-radius: 50%;
+          top: 50%; left: 50%;
+          border: 1px solid rgba(255,215,0,0.06);
+          animation: pulse-ring 6s ease-in-out infinite;
+        }
+        .r1 { width: 160px; height: 160px; transform: translate(-50%, -50%); }
+        .r2 { width: 160px; height: 160px; transform: translate(-10%, -50%); animation-delay: 1s; border-color: rgba(123,47,247,0.05); }
+        .r3 { width: 160px; height: 160px; transform: translate(-90%, -50%); animation-delay: 2s; border-color: rgba(0,240,255,0.05); }
+        .r4 { width: 160px; height: 160px; transform: translate(-50%, -10%); animation-delay: 0.5s; }
+        .r5 { width: 160px; height: 160px; transform: translate(-50%, -90%); animation-delay: 1.5s; }
+        .r6 { width: 240px; height: 240px; transform: translate(-50%, -50%); animation-delay: 3s; border-color: rgba(255,215,0,0.03); }
+        .r7 { width: 320px; height: 320px; transform: translate(-50%, -50%); animation-delay: 4s; border-color: rgba(123,47,247,0.02); }
+
+        /* horizontal scan line */
+        .scan {
+          position: absolute; width: 100%; height: 1px;
+          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.15) 50%, transparent 100%);
+          animation: scan-move 8s ease-in-out infinite;
         }
 
-        .geometry::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 140px;
-          height: 140px;
-          transform: translate(-50%, -50%) rotate(30deg);
-          border: 1px solid rgba(255, 215, 0, 0.05);
+        /* vertical light streaks */
+        .streak {
+          position: absolute; width: 1px; height: 100%;
+          animation: streak-move 12s linear infinite;
         }
+        .s1 { left: 20%; background: linear-gradient(180deg, transparent, rgba(255,215,0,0.06), transparent); animation-delay: 0s; }
+        .s2 { left: 50%; background: linear-gradient(180deg, transparent, rgba(123,47,247,0.06), transparent); animation-delay: 4s; }
+        .s3 { left: 80%; background: linear-gradient(180deg, transparent, rgba(0,240,255,0.06), transparent); animation-delay: 8s; }
 
-        .geo-left {
-          left: -60px;
-          top: 40px;
-          animation-direction: normal;
+        /* corner accents */
+        .corner {
+          position: absolute; width: 40px; height: 40px;
+          border-color: rgba(255,215,0,0.15);
+          border-style: solid; border-width: 0;
         }
+        .tl { top: 15px; left: 15px; border-top-width: 1px; border-left-width: 1px; }
+        .tr { top: 15px; right: 15px; border-top-width: 1px; border-right-width: 1px; }
+        .bl { bottom: 15px; left: 15px; border-bottom-width: 1px; border-left-width: 1px; }
+        .br { bottom: 15px; right: 15px; border-bottom-width: 1px; border-right-width: 1px; }
 
-        .geo-right {
-          right: -60px;
-          top: 40px;
-          animation-direction: reverse;
-        }
-
-        .center-ring {
-          position: absolute;
-          width: 260px;
-          height: 260px;
-          border-radius: 50%;
-          border: 1px solid rgba(255, 215, 0, 0.04);
-          animation: pulse-ring 8s ease-in-out infinite;
-        }
-
-        .center-ring-2 {
-          position: absolute;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          border: 1px solid rgba(123, 47, 247, 0.04);
-          animation: pulse-ring 8s ease-in-out infinite 2s;
-        }
-
+        /* floating hex shapes */
         .hex {
           position: absolute;
-          width: 60px;
-          height: 60px;
-          border: 1px solid rgba(255, 215, 0, 0.06);
+          width: 30px; height: 30px;
+          border: 1px solid rgba(255,215,0,0.08);
           transform: rotate(45deg);
-          animation: float 6s ease-in-out infinite;
+          animation: float 5s ease-in-out infinite;
         }
+        .h1 { left: 8%; top: 20%; animation-delay: 0s; }
+        .h2 { right: 8%; bottom: 20%; animation-delay: 2.5s; border-color: rgba(123,47,247,0.08); }
+        .h3 { left: 15%; bottom: 15%; animation-delay: 1s; width: 20px; height: 20px; border-color: rgba(0,240,255,0.08); }
+        .h4 { right: 15%; top: 15%; animation-delay: 3.5s; width: 20px; height: 20px; }
 
-        .hex-1 { left: 120px; top: 30px; animation-delay: 0s; }
-        .hex-2 { right: 120px; bottom: 30px; animation-delay: 2s; }
-        .hex-3 { left: 200px; bottom: 20px; animation-delay: 4s; width: 40px; height: 40px; }
-        .hex-4 { right: 200px; top: 20px; animation-delay: 1s; width: 40px; height: 40px; }
-
-        .dot {
-          position: absolute;
-          width: 3px;
-          height: 3px;
-          border-radius: 50%;
-          background: rgba(255, 215, 0, 0.15);
-          animation: twinkle 4s ease-in-out infinite;
-        }
-
-        .dot-1 { left: 15%; top: 20%; animation-delay: 0s; }
-        .dot-2 { left: 25%; top: 70%; animation-delay: 1.5s; }
-        .dot-3 { right: 15%; top: 25%; animation-delay: 0.8s; }
-        .dot-4 { right: 25%; bottom: 20%; animation-delay: 2.2s; }
-        .dot-5 { left: 40%; top: 15%; animation-delay: 3s; }
-        .dot-6 { right: 40%; bottom: 15%; animation-delay: 1s; }
-        .dot-7 { left: 10%; top: 50%; animation-delay: 2.5s; }
-        .dot-8 { right: 10%; top: 55%; animation-delay: 0.3s; }
-
-        .content {
-          position: relative;
-          z-index: 10;
-          text-align: center;
-        }
+        /* text */
+        .content { position: relative; z-index: 10; text-align: center; }
 
         .name {
-          font-size: 2.4em;
-          font-weight: 300;
-          letter-spacing: 0.3em;
+          font-size: 2.2em; font-weight: 300;
+          letter-spacing: 0.35em;
           color: rgba(255, 215, 0, 0.9);
-          text-shadow: 0 0 30px rgba(255, 215, 0, 0.15), 0 0 60px rgba(255, 215, 0, 0.05);
-          animation: glow-text 6s ease-in-out infinite;
-          margin-bottom: 12px;
+          text-shadow: 0 0 40px rgba(255,215,0,0.2), 0 0 80px rgba(255,215,0,0.05);
+          animation: glow-text 5s ease-in-out infinite;
+          margin-bottom: 16px;
         }
 
-        .line {
-          width: 120px;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
-          margin: 0 auto 14px;
-          animation: expand 4s ease-in-out infinite;
+        .divider {
+          width: 80px; height: 1px; margin: 0 auto 16px;
+          background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), rgba(123,47,247,0.3), transparent);
+          animation: expand 5s ease-in-out infinite;
         }
 
         .sub {
-          font-size: 0.75em;
-          letter-spacing: 0.5em;
-          color: rgba(180, 160, 200, 0.5);
-          text-transform: lowercase;
+          font-size: 0.7em; letter-spacing: 0.4em;
+          color: rgba(180, 160, 210, 0.45);
         }
 
-        @keyframes spin { to { transform: rotate(360deg); } }
-        
+        .tag {
+          margin-top: 12px; font-size: 0.55em;
+          letter-spacing: 0.2em;
+          color: rgba(0, 240, 255, 0.25);
+        }
+
+        @keyframes conic-spin { to { transform: rotate(360deg); } }
+        @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
         @keyframes pulse-ring {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.05); opacity: 0.5; }
+          0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
         }
-
         @keyframes glow-text {
-          0%, 100% { text-shadow: 0 0 30px rgba(255,215,0,0.15), 0 0 60px rgba(255,215,0,0.05); }
-          50% { text-shadow: 0 0 40px rgba(255,215,0,0.25), 0 0 80px rgba(255,215,0,0.1); }
+          0%, 100% { text-shadow: 0 0 40px rgba(255,215,0,0.2), 0 0 80px rgba(255,215,0,0.05); }
+          50% { text-shadow: 0 0 60px rgba(255,215,0,0.35), 0 0 120px rgba(255,215,0,0.1), 0 0 4px rgba(255,215,0,0.6); }
         }
-
         @keyframes float {
-          0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.6; }
-          50% { transform: rotate(45deg) translateY(-8px); opacity: 1; }
+          0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.5; }
+          50% { transform: rotate(45deg) translateY(-10px); opacity: 1; }
         }
-
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.1; transform: scale(1); }
-          50% { opacity: 0.6; transform: scale(1.5); }
+        @keyframes scan-move {
+          0% { top: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; }
         }
-
+        @keyframes streak-move {
+          0% { opacity: 0; transform: translateY(-100%); }
+          20% { opacity: 1; }
+          80% { opacity: 1; }
+          100% { opacity: 0; transform: translateY(100%); }
+        }
         @keyframes expand {
-          0%, 100% { width: 120px; }
-          50% { width: 180px; }
+          0%, 100% { width: 80px; } 50% { width: 200px; }
+        }
+        @keyframes grid-fade {
+          0%, 100% { opacity: 0.6; } 50% { opacity: 1; }
         }
       </style>
-      <div class="container">
-        <div class="grid"></div>
-        <div class="geometry geo-left"></div>
-        <div class="geometry geo-right"></div>
-        <div class="center-ring"></div>
-        <div class="center-ring-2"></div>
-        <div class="hex hex-1"></div>
-        <div class="hex hex-2"></div>
-        <div class="hex hex-3"></div>
-        <div class="hex hex-4"></div>
-        <div class="dot dot-1"></div>
-        <div class="dot dot-2"></div>
-        <div class="dot dot-3"></div>
-        <div class="dot dot-4"></div>
-        <div class="dot dot-5"></div>
-        <div class="dot dot-6"></div>
-        <div class="dot dot-7"></div>
-        <div class="dot dot-8"></div>
+      <div class="c">
+        <div class="g"></div>
+        <div class="scan"></div>
+        <div class="streak s1"></div>
+        <div class="streak s2"></div>
+        <div class="streak s3"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="ring r4"></div>
+        <div class="ring r5"></div>
+        <div class="ring r6"></div>
+        <div class="ring r7"></div>
+        <div class="orbit"><div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div><div class="particle p4"></div></div>
+        <div class="orbit orbit-2"><div class="particle p5"></div><div class="particle p6"></div></div>
+        <div class="orbit orbit-3"><div class="particle p1"></div><div class="particle p3"></div></div>
+        <div class="hex h1"></div>
+        <div class="hex h2"></div>
+        <div class="hex h3"></div>
+        <div class="hex h4"></div>
         <div class="content">
           <div class="name">VIVEK PATTANAIK</div>
-          <div class="line"></div>
-          <div class="sub">bay area · software engineer</div>
+          <div class="divider"></div>
+          <div class="sub">software engineer · bay area</div>
+          <div class="tag">search · on-device ml · metal · swift</div>
         </div>
       </div>
     </div>
