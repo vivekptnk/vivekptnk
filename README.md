@@ -9,27 +9,29 @@
 ```yaml
 name: Vivek Pattanaik
 location: Bay Area, CA
-role: Senior Software Engineer
+education: BS Computer Engineering, SUNY Binghamton
 
-currently_building:
-  - "vector search engine in pure Swift"
-  - "on-device LLM inference with Metal shaders"
+day_job:
+  role: Sr. Software Engineer, Mobile
+  where: Realtor.com
+  doing:
+    - "tech lead on Search & Discover (iOS + Android, 6 engineers)"
+    - "built natural language search from scratch"
+    - "pioneered server-driven UI architecture"
+    - "AI champion for the mobile org"
+  shipped_to: "millions of users"
 
-previously:
-  - "search systems at Realtor.com (millions of users)"
-  - "led mobile teams across iOS & Android"
-  - "shipped natural language search to production"
+nights_and_weekends:
+  building:
+    - "vector search engine in pure Swift + Accelerate"
+    - "LLM inference runtime in Swift + Metal"
+  why: "because the best way to learn something is to build it from nothing"
 
-interests_outside_code:
-  - philosophy
-  - AI (building it, not prompting it)
-  - spirituality
-  - lifting
-  - motorcycles
-  - space tech
-  - robotics
-  - animals
-  - travel
+interests:
+  mind: [philosophy, AI, spirituality, strategy]
+  body: [lifting, motorcycles, travel]
+  frontier: [space tech, robotics, deep science]
+  soul: [animals, presence, the unknown]
 ```
 
 ---
