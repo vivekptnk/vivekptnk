@@ -13,7 +13,7 @@ education: BS Computer Engineering, SUNY Binghamton
 
 day_job:
   role: Sr. Software Engineer, Mobile
-  where: Realtor.com
+  where: Realtor.com  # work commits live at @vivek-rdc
   doing:
     - "tech lead on Search & Discover (iOS + Android, 6 engineers)"
     - "built natural language search from scratch"
@@ -41,7 +41,7 @@ interests:
 ### `~/projects`
 
 <!-- PROJECTS:START -->
-> *Nothing here yet — projects will appear when they go public.*
+*repos appear here when they go public*
 <!-- PROJECTS:END -->
 
 </div>
@@ -56,17 +56,19 @@ interests:
 
 <br>
 
+<div align="center">
+<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" alt="Combined contributions across personal + work" width="95%" />
+<br>
+<sub>combined contributions across <a href="https://github.com/vivekptnk">@vivekptnk</a> + <a href="https://github.com/vivekptnk1">@vivekptnk1</a> + <a href="https://github.com/vivek-rdc">@vivek-rdc</a></sub>
+</div>
+
+<br>
+
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vivekptnk/vivekptnk/output/snake-dark.svg" />
 <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vivekptnk/vivekptnk/output/snake.svg" />
 <img alt="contribution snake" src="https://raw.githubusercontent.com/vivekptnk/vivekptnk/output/snake-dark.svg" />
 </picture>
-
-<br>
-
-<div align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com?user=vivekptnk&theme=dark&hide_border=true&ring=00ff41&fire=00ff41&currStreakLabel=00ff41" width="48%" />
-</div>
 
 <br>
 
