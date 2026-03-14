@@ -32,7 +32,7 @@ interests:
 ### `~/projects`
 
 <!-- PROJECTS:START -->
-*repos appear here when they go public*
+> *Nothing here yet — projects will appear when they go public.*
 <!-- PROJECTS:END -->
 
 <br>
