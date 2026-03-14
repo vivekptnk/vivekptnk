@@ -1,15 +1,6 @@
 <div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:161b22,100:0d1117&height=120&section=header&text=&fontSize=0" width="100%"/>
-
-```
- vivek pattanaik
- engineer. philosopher. rider.
-```
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6b35,25:f7931e,50:ffcd38,75:c06cde,100:6c63ff&height=220&section=header&text=Vivek%20Pattanaik&fontColor=ffffff&fontSize=48&fontAlignY=32&desc=engineer%20%C2%B7%20philosopher%20%C2%B7%20rider&descColor=ffffffcc&descSize=18&descAlignY=52&animation=fadeIn" width="100%" />
 </div>
-
-&nbsp;
 
 ```yaml
 # ~/.config/vivek.yml
@@ -33,32 +24,22 @@ previous:
 education: bs computer engineering, binghamton
 ```
 
-&nbsp;
-
 <div align="center">
 
-```
- search ── maps ── nlp ── on-device ml ── metal ── server-driven ui
-```
-
-</div>
+<img src="https://skillicons.dev/icons?i=swift,python,c,apple&theme=dark" />
 
 &nbsp;
 
-<div align="center">
-<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" width="92%" />
-</div>
-
-&nbsp;
-
-<div align="center">
-
-```
- philosophy · lifting · motorcycles · space · robotics · animals
-```
+<img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" width="90%" />
 
 <sub><a href="https://github.com/vivekptnk">vivekptnk</a> · <a href="https://github.com/vivek-rdc">vivek-rdc</a> · <a href="https://github.com/vivekptnk1">vivekptnk1</a></sub>
 
+&nbsp;
+
+```
+philosophy · AI · lifting · motorcycles · space · robotics · animals
+```
+
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0d1117&height=1&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c63ff,25:c06cde,50:ffcd38,75:f7931e,100:ff6b35&height=100&section=footer" width="100%" />
