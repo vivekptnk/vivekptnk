@@ -24,7 +24,23 @@ into: [philosophy, AI, lifting, motorcycles, space, robotics, animals]
 ```
 
 <div align="center">
+<img src="./divider.svg" width="60%" />
+</div>
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i=swift,apple,python,c&theme=dark&perline=4" />
+<br><br>
+
+<!-- PROJECTS:START -->
+<!-- PROJECTS:END -->
+
 <img src="https://github-contribution-merger.vercel.app/api/merge?users=vivekptnk,vivek-rdc,vivekptnk1&theme=github-dark" width="90%" />
 <br>
 <sub><a href="https://github.com/vivekptnk">vivekptnk</a> · <a href="https://github.com/vivek-rdc">vivek-rdc</a> · <a href="https://github.com/vivekptnk1">vivekptnk1</a></sub>
+</div>
+
+<br>
+
+<div align="center">
+<img src="./footer.svg" width="100%" />
 </div>
