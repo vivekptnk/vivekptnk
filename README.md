@@ -15,7 +15,7 @@ I don't really have a specialization. I have projects.
 ### what I'm working on
 
 <!-- PROJECTS:START -->
-*Repos show up here automatically when they go public.*
+> *Nothing here yet — projects will appear when they go public.*
 <!-- PROJECTS:END -->
 
 ---
