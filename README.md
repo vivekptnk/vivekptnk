@@ -7,10 +7,10 @@
 
 current:
   realtor.com:
-    role: senior ios engineer / tech lead
+    role: sr software engineer / tech lead / centaur developer 
     scope: [search, maps, NL search, server-driven UI]
     scale: "the app 100M+ people use to find home"
-
+    
 building:
   - vector search engine    # swift + accelerate
   - llm inference runtime   # swift + metal
