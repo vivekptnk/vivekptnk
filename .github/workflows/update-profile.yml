@@ -24,8 +24,14 @@ jobs:
       - name: Update README with latest projects
         run: python scripts/update-readme.py
 
+      - name: Generate merged contributions graph
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate-contributions.py
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git diff --quiet README.md || (git add README.md && git commit -m "chore: auto-update profile" && git push)
+          git add README.md contributions.svg
+          git diff --cached --quiet || (git commit -m "chore: auto-update profile" && git push)
