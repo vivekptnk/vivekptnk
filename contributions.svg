@@ -381,8 +381,9 @@
 <rect x="704" y="20" width="10" height="10" rx="2" fill="#161b22"/>
 <rect x="704" y="33" width="10" height="10" rx="2" fill="#26a641"/>
 <rect x="704" y="46" width="10" height="10" rx="2" fill="#39d353"/>
-<rect x="704" y="59" width="10" height="10" rx="2" fill="#006d32"/>
-<text x="28" y="127" fill="#8b949e" font-size="10">1,940 contributions in the last year across 3 accounts</text>
+<rect x="704" y="59" width="10" height="10" rx="2" fill="#26a641"/>
+<rect x="704" y="72" width="10" height="10" rx="2" fill="#161b22"/>
+<text x="28" y="127" fill="#8b949e" font-size="10">1,943 contributions in the last year across 3 accounts</text>
 <text x="618" y="127" fill="#8b949e" font-size="10" text-anchor="end">Less</text>
 <rect x="622" y="119" width="10" height="10" rx="2" fill="#161b22"/>
 <rect x="635" y="119" width="10" height="10" rx="2" fill="#0e4429"/>
